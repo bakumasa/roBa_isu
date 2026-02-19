@@ -46,7 +46,7 @@
 
         double_quotation {
             bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
+            key-positions = <4 3>;
         };
 
         eq {
@@ -73,6 +73,34 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        MB2grave: MB2grave {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MB2GRAVE";
+            #binding-cells = <0>;
+            bindings = <&mkp MB2>, <&kp TILDE>;
+        };
+
+        COMMAsemicolon: COMMAsemicolon {
+            compatible = "zmk,behavior-tap-dance";
+            label = "COMMASEMICOLON";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp SEMICOLON>;
+        };
+
+        PERIODcolon: PERIODcolon {
+            compatible = "zmk,behavior-tap-dance";
+            label = "PERIODCOLON";
+            #binding-cells = <0>;
+            bindings = <&kp PERIOD>, <&kp COLON>;
+        };
+
+        MINUSequal: MINUSequal {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MINUSEQUAL";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp LS(MINUS)>;
+        };
     };
 
     keymap {
@@ -80,10 +108,10 @@
 
         default_layer {
             bindings = <
-&kp Q    &kp J         &kp U         &kp COMMA  &kp DOT                                 &kp F     &kp W  &kp R  &kp Y  &kp P
-&kp E    &kp I         &kp A         &kp O      &kp MINUS  &kp PG_UP          &mkp MB5  &kp K     &kp T  &kp N  &kp S  &kp H
-&kp L    &kp X         &kp N         &kp V      &kp C      &kp PAGE_DOWN      &mkp MB4  &kp G     &kp D  &kp M  &kp Z  &kp B
-&kp TAB  &kp LEFT_WIN  &kp LEFT_ALT  &kp SPACE  &mkp LCLK  &kp SPACE          &kp RET   &kp BSPC                       &kp DEL
+&kp Q    &kp J         &kp U         &COMMAsemicolon  &PERIODcolon                               &kp F     &kp W  &kp R  &kp Y  &kp P
+&kp E    &kp I         &kp A         &kp O            &MINUSequal   &kp PG_UP          &mkp MB5  &kp K     &kp T  &kp N  &kp S  &kp H
+&kp L    &kp X         &kp N         &kp V            &kp C         &kp PAGE_DOWN      &mkp MB4  &kp G     &kp D  &kp M  &kp Z  &kp B
+&kp TAB  &kp LEFT_WIN  &kp LEFT_ALT  &kp SPACE        &mkp LCLK     &MB2grave          &kp RET   &kp BSPC                       &kp ESC
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
