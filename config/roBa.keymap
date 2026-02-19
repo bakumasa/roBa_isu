@@ -92,7 +92,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "PERIODCOLON";
             #binding-cells = <0>;
-            bindings = <&kp PERIOD>, <&kp COLON>;
+            bindings = <&kp PERIOD>, <&kp SINGLE_QUOTE>;
         };
 
         MINUSequal: MINUSequal {
