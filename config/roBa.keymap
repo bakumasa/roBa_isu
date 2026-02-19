@@ -108,10 +108,10 @@
 
         default_layer {
             bindings = <
-&kp Q    &kp J         &kp U         &COMMAsemicolon  &PERIODcolon                               &kp F     &kp W  &kp R  &kp Y  &kp P
-&kp E    &kp I         &kp A         &kp O            &MINUSequal   &kp PG_UP          &mkp MB5  &kp K     &kp T  &kp N  &kp S  &kp H
-&kp L    &kp X         &kp N         &kp V            &kp C         &kp PAGE_DOWN      &mkp MB4  &kp G     &kp D  &kp M  &kp Z  &kp B
-&kp TAB  &kp LEFT_WIN  &kp LEFT_ALT  &kp SPACE        &mkp LCLK     &MB2grave          &kp RET   &kp BSPC                       &kp ESC
+&kp Q    &kp J         &kp U         &COMMAsemicolon  &PERIODcolon                               &kp F     &kp W    &kp R    &kp Y  &kp P
+&kp E    &kp I         &kp A         &lt 2 O          &MINUSequal   &kp PG_UP          &mkp MB5  &kp K     &lt 2 T  &lt 5 N  &kp S  &kp H
+&kp L    &kp X         &kp N         &kp V            &kp C         &kp PAGE_DOWN      &mkp MB4  &kp G     &kp D    &kp M    &kp Z  &kp B
+&kp TAB  &kp LEFT_WIN  &kp LEFT_ALT  &kp SPACE        &mkp LCLK     &MB2grave          &kp RET   &kp BSPC                           &kp ESC
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -128,10 +128,10 @@
 
         NUM {
             bindings = <
-&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                   &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
-&trans                      &trans           &trans           &trans           &trans        &trans                       &trans          &trans                                                                     &kp PIPE
+&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                   &kp LS(STAR)  &kp N7  &kp N8  &kp N9  &kp FSLH
+&kp MINUS                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp LS(PLUS)  &kp N4  &kp N5  &kp N6  &kp MINUS
+&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &trans          &kp N0        &kp N1  &kp N2  &kp N3  &kp BACKSLASH
+&trans                      &trans           &trans           &trans           &trans        &trans                       &trans          &trans                                &kp PIPE
             >;
         };
 
@@ -157,19 +157,19 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                        &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans        &mkp MB1      &mkp MB2      &trans  &trans                          &trans
             >;
         };
 
         layer_6 {
             bindings = <
 &trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &kp UP        &trans        &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &kp LEFT      &kp DOWN      &kp RIGHT     &bt BT_CLR
+&trans  &trans        &trans        &trans        &trans  &trans      &kp RET      &kp BSPC                                                &bt BT_CLR_ALL
             >;
         };
     };
