@@ -108,10 +108,10 @@
 
         default_layer {
             bindings = <
-&kp Q    &kp J         &kp U         &COMMAsemicolon  &PERIODcolon                               &kp F     &kp W  &kp R  &kp Y  &kp P
-&kp E    &kp I         &kp A         &kp O            &MINUSequal   &kp PG_UP          &mkp MB5  &kp K     &kp T  &kp N  &kp S  &kp H
-&kp L    &kp X         &kp N         &kp V            &kp C         &kp PAGE_DOWN      &mkp MB4  &kp G     &kp D  &kp M  &kp Z  &kp B
-&kp TAB  &kp LEFT_WIN  &kp LEFT_ALT  &kp SPACE        &mkp LCLK     &MB2grave          &kp RET   &kp BSPC                       &kp ESC
+&kp Q    &kp J         &kp U         &kp COMMA  &kp DOT                                 &kp F     &kp W  &kp R  &kp Y  &kp P
+&kp E    &kp I         &kp A         &kp O      &kp MINUS  &kp PG_UP          &mkp MB5  &kp K     &kp T  &kp N  &kp S  &kp H
+&kp L    &kp X         &kp N         &kp V      &kp C      &kp PAGE_DOWN      &mkp MB4  &kp G     &kp D  &kp M  &kp Z  &kp B
+&kp TAB  &kp LEFT_WIN  &kp LEFT_ALT  &kp SPACE  &mkp LCLK  &mkp RCLK          &kp RET   &kp BSPC                       &kp ESC
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -119,10 +119,10 @@
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &trans  &trans  &trans  &trans  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                          &kp F12
+&trans  &trans  &trans  &trans  &trans                          &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
+&trans  &trans  &trans  &trans  &trans     &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+&trans  &trans  &trans  &trans  &trans     &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
+&trans  &trans  &trans  &trans  &mkp LCLK  &trans      &trans   &trans                          &kp F12
             >;
         };
 
