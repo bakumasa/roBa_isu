@@ -207,6 +207,9 @@
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &trans   &trans        &kp LEFT      &kp DOWN      &kp RIGHT     &bt BT_CLR
 &trans  &trans        &trans        &trans        &trans  &trans      &kp RET  &kp BSPC                                                &bt BT_CLR_ALL
             >;
+
+           sensor-bindings =
+               <&inc_dec_kp LC(LG(LEFT_ARROW)) LC(LG(RIGHT_ARROW))>;
         };
 
         KAKKO_MARK {
