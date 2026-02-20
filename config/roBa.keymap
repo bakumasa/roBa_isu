@@ -82,6 +82,21 @@
 
             label = "KAIWAKAKKO";
         };
+
+        daisyoukakko: daisyoukakko {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LS(COMMA)>,
+                <&macro_wait_time 15>,
+                <&kp LS(DOT)>,
+                <&macro_wait_time 15>,
+                <&kp ENTER>,
+                <&macro_wait_time 15>,
+                <&kp LEFT_ARROW>;
+
+            label = "DAISYOUKAKKO";
+        };
     };
 
     behaviors {
@@ -164,10 +179,10 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans  &trans  &trans  &trans  &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                          &trans
+&kp ESCAPE      &kp LS(N8)     &kakko         &kp LS(N9)   &trans                       &trans  &kp EQUAL   &kp LS(EQUAL)  &trans            &trans
+&kp HOME        &kp LBKT       &kaiwakakko    &kp RBKT     &kp END  &trans      &trans  &trans  &kp LS(N1)  &kp LS(SLASH)  &kp LS(NUMBER_6)  &kp LBKT
+&kp LEFT_SHIFT  &kp LS(COMMA)  &daisyoukakko  &kp LS(DOT)  &trans   &trans      &trans  &trans  &kp BSLH    &kp LS(N4)     &kp LS(N5)        &trans
+&trans          &trans         &trans         &trans       &trans   &trans      &trans  &trans                                               &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
